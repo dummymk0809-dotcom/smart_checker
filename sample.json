@@ -1,0 +1,19 @@
+{
+    "SERIAL_PORT": "/dev/ttyACM0",
+    "NAS_CONFIG": {
+        "synology": {
+            "host": "1.1.1.1",
+            "user": "iamuser",
+            "smartctl_path": "/bin/smartctl",
+            "devices": ["/dev/sda", "/dev/sdb"],
+            "ssh_key_path": "~/.ssh/id_rsa"
+        },
+        "truenas": {
+            "host": "1.1.1.2",
+            "user": "iamuser",
+            "smartctl_path": "/sbin/smartctl",
+            "devices": ["/dev/sda", "/dev/sdb"],
+            "ssh_key_path": "~/.ssh/id_rsa"
+        }
+    }
+}
