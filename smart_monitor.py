@@ -7,10 +7,17 @@ from datetime import datetime
 import json
 import os
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 # ====================================================================
-# 1. 設定ファイルの読み込み
+# 1. 設定定義
 # ====================================================================
-CONFIG_FILE = 'config.json'
+
+if SCRIPT_DIR not in sys.path:
+    sys.path.append(SCRIPT_DIR)
+
+# 設定ファイル名とパスを定義: SCRIPT_DIR を使って絶対パスを指定
+CONFIG_FILE = os.path.join(SCRIPT_DIR, 'config.json')
+
 try:
     # スクリプトと同じディレクトリにあるconfig.jsonを読み込む
     with open(CONFIG_FILE, 'r') as f:
